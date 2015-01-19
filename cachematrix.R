@@ -4,6 +4,7 @@
 ## functions do
 
 ## Write a short comment describing this function
+## Adding more comments by Sampath Kumar Padmanaban
 
 makeCacheMatrix <- function(x = matrix()) {
 
