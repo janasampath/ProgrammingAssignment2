@@ -1,10 +1,11 @@
 ## R Programming Course by Coursera
 ## Programming Assingment 2 - Caching the Inverse of a Matrix
+## Date Submitted : Tuesday, 20th January, 2015
 
-## There are two functions Put comments here that give an overall description of what your
+## There are two functions in this assignment
 
-## 1. makeCacheMatrix - This function takes an invertible matrix as input and prepares the cacheable matrix object
-## This function creates a special "matrix', which is really a list containing functions to
+## 1. makeCacheMatrix - This function takes an invertible matrix as input and prepares the cacheable 'matrix' object
+## which is really a list containing functions to
 ## set the matrix
 ## get the matrix
 ## set the inverse of the matrix
@@ -36,7 +37,7 @@ makeCacheMatrix <- function(x = matrix()) {
   ## Get method to return the available inverse value 
   getInverse <- function() invMatrix
   
-  ## return a list with the set, get methods for the special 'vector' and the mean of the 'vector'
+  ## return a list with the set, get methods for the matrix and the inverse
   list(set = set, get = get,
        setInverse = setInverse,
        getInverse = getInverse)
@@ -48,9 +49,9 @@ cacheSolve <- function(x, ...) {
   ## first get the inverse
   invM <- x$getInverse()
   
-  ## If not null, return the cached value
+  ## If the inverse is not null, return the cached value
   if(!is.null(invM)) {
-    message("Getting inverse of the matrix from cached data")
+    message("Returning the inverse of the matrix from cached data")
     return(invM)
   }
   
